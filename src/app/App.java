@@ -29,6 +29,9 @@ public class App {
         System.out.println( String.format("in = %x, out = %x", inByteArray[i], outByteArray[i]) );
     }
 
+    for(int i=0; i<BYTE_ARRAY_SIZE; i++){
+        outByteArray[i] = 0;
+    }
     System.out.println( String.format("Byte => short => Byte, Little Endian") );
     arrayCopy.setEndian(Endian.LITTLE_ENDIAN);
     arrayCopy.copyArrayFromByte(inByteArray, shortArray);
@@ -37,6 +40,9 @@ public class App {
         System.out.println( String.format("in = %x, out = %x", inByteArray[i], outByteArray[i]) );
     }
 
+    for(int i=0; i<BYTE_ARRAY_SIZE; i++){
+        outByteArray[i] = 0;
+    }
     System.out.println( String.format("Byte => Int => Byte, Big Endian") );
     arrayCopy.setEndian(Endian.BIG_ENDIAN);
     arrayCopy.copyArrayFromByte(inByteArray, IntArray);
@@ -45,6 +51,9 @@ public class App {
         System.out.println( String.format("in = %x, out = %x", inByteArray[i], outByteArray[i]) );
     }
 
+    for(int i=0; i<BYTE_ARRAY_SIZE; i++){
+        outByteArray[i] = 0;
+    }
     System.out.println( String.format("Byte => Int => Byte, Little Endian") );
     arrayCopy.setEndian(Endian.LITTLE_ENDIAN);
     arrayCopy.copyArrayFromByte(inByteArray, IntArray);

@@ -38,7 +38,7 @@ public class ArrayCopy {
         buffer.order(ByteOrder.LITTLE_ENDIAN);
     }
 
-    for(i=0; i< length*4; i++){
+    for(i=0; i< length*Integer.BYTES; i++){
       buffer.put(byteArray[i]);
     }
     buffer.flip();
@@ -63,7 +63,7 @@ public class ArrayCopy {
       buffer.putInt(intArray[i]);
     }
     buffer.flip();
-    for(i=0; i< length*2; i++){
+    for(i=0; i< length*Integer.BYTES; i++){
       byteArray[i] = buffer.get();
     }
 
@@ -83,7 +83,7 @@ public class ArrayCopy {
         buffer.order(ByteOrder.LITTLE_ENDIAN);
     }
       
-    for(i=0; i< length*2; i++){
+    for(i=0; i< length*Short.BYTES; i++){
         buffer.put(byteArray[i]);
     }
     buffer.flip();
@@ -108,7 +108,7 @@ public class ArrayCopy {
       buffer.putShort(shortArray[i]);
     }
     buffer.flip();
-    for(i=0; i< length*2; i++){
+    for(i=0; i< length*Short.BYTES; i++){
       byteArray[i] = buffer.get();
     }
 
